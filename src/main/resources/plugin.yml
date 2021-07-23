@@ -1,0 +1,5 @@
+name: HarukaTrade
+version: @version@
+main: com.github.shur.harukatrade.HarukaTrade
+api-version: 1.16
+authors: [ ShuR ]
