@@ -19,7 +19,7 @@ class DripTrade(file: File) : Trade {
 
     override val name: String = config.getString("name")!!
 
-    override val owners: Set<UUID> = config.getStringList("owners").map { UUID.fromString(it) }.toMutableSet()
+    override val owners: Set<UUID> = config.getStringList("owners").map { UUID.fromString(it) }.toSet()
 
     override val contents: Map<Int, TradeContent> = mutableMapOf<Int, TradeContent>().apply {
         val contentsConfig = config.getConfigurationSection("contents") ?: MemoryConfiguration()
