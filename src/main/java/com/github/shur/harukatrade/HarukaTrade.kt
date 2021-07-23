@@ -2,6 +2,7 @@ package com.github.shur.harukatrade
 
 import com.github.shur.harukatrade.api.TradeRegistry
 import com.github.shur.harukatrade.command.HarukaTradeCommand
+import com.github.shur.harukatrade.listener.PlayerInteractListener
 import com.github.shur.harukatrade.tradeloader.TradeLoader
 import com.github.shur.harukatrade.tradeloader.drip.DripTradeLoader
 import org.bukkit.plugin.java.JavaPlugin
@@ -17,6 +18,8 @@ class HarukaTrade : JavaPlugin() {
         loadTrades()
 
         HarukaTradeCommand.registerCommand()
+
+        server.pluginManager.registerEvents(PlayerInteractListener(), this)
     }
 
     fun loadTrades() {
