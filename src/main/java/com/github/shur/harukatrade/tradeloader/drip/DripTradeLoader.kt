@@ -8,7 +8,6 @@ class DripTradeLoader : TradeLoader {
 
     override fun load() {
         val dataFolder = File("${HarukaTrade.instance.dataFolder.absolutePath}/drip")
-        if (!dataFolder.canRead()) throw IllegalStateException()
         if (!dataFolder.exists() || !dataFolder.isDirectory) dataFolder.mkdirs()
 
         dataFolder.listFiles()?.forEach {
