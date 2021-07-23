@@ -1,0 +1,14 @@
+# File name is ID
+name: <String>
+owners: <StringList / UUID>
+contents:
+# if type is "backPanel"
+  <content_number>:
+    type: "backPanel"
+    panel: <ItemStack>
+    # if type is "product"
+  <content_number1>:
+    type: "product"
+    sell: <ItemStack>
+    buy:
+      <0..>: <ItemStack>
